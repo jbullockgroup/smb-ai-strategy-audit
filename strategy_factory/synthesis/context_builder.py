@@ -226,6 +226,10 @@ class ContextBuilder:
         
         sections = []
         
+        # Verified tech (from DNS/HTTP detection) takes priority
+        if tech.verified_tech_summary:
+            sections.append(tech.verified_tech_summary)
+
         if tech.company_tech_stack:
             stack = ", ".join(tech.company_tech_stack[:10])
             sections.append(f"## Current Tech Stack\n{stack}")

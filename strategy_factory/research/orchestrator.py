@@ -21,6 +21,7 @@ from ..temporal import get_temporal_context, TemporalContext
 from .perplexity_client import PerplexityClient
 from .query_templates import QueryTemplates, QueryCategory, QueryTemplate
 from .result_processor import ResultProcessor
+from .tech_detector import detect_tech, TechDetectionResult
 
 
 class ResearchOrchestrator:
@@ -82,6 +83,7 @@ class ResearchOrchestrator:
         self.current_phase = ""
         self.results: Dict[str, QueryResult] = {}
         self.info_tier = CompanyInfoTier.PUBLIC_MEDIUM
+        self.tech_detection: Optional[TechDetectionResult] = None
     
     def research(self, company_input: CompanyInput) -> ResearchOutput:
         """
@@ -122,6 +124,15 @@ class ResearchOrchestrator:
         self.info_tier = self.result_processor.detect_info_tier(initial_results)
         self._report_progress(f"Detected info tier: {self.info_tier.value}", 0.25)
 
+        # Tech detection via DNS/HTTP (zero API cost)
+        domain = self._resolve_domain(company_input, self.results)
+        if domain:
+            self._report_progress("tech_detection", 0.30)
+            try:
+                self.tech_detection = detect_tech(domain)
+            except Exception as e:
+                self._report_progress(f"Tech detection skipped: {e}", 0.30)
+
         # Phase 2: Industry Analysis
         self._report_progress("industry_analysis", 0.4)
         self._execute_phase("industry_analysis", company_name, industry, context, location)
@@ -140,10 +151,77 @@ class ResearchOrchestrator:
         
         # Update info tier in output
         output.information_tier = self.info_tier
+
+        # Merge verified tech detection into tech landscape
+        if self.tech_detection:
+            verified = self.tech_detection.to_tech_list()
+            if verified:
+                # Prepend verified tech (deduplicated against inferred)
+                existing_lower = {t.lower() for t in output.tech_landscape.company_tech_stack}
+                new_tech = [t for t in verified if t.lower() not in existing_lower]
+                output.tech_landscape.company_tech_stack = new_tech + output.tech_landscape.company_tech_stack
+                output.tech_landscape.verified_tech_summary = self.tech_detection.to_summary()
         
         self._report_progress("Research complete", 1.0)
         
         return output
+
+    @staticmethod
+    def _resolve_domain(
+        company_input: CompanyInput,
+        results: Dict[str, QueryResult],
+    ) -> Optional[str]:
+        """
+        Resolve the company's domain for tech detection.
+
+        Checks (in order):
+        1. Explicit website field on CompanyInput
+        2. URLs found in company_presence search results
+        3. Common domain patterns from the company name
+        """
+        # 1. Explicit website
+        if company_input.website:
+            return company_input.website
+
+        # 2. Extract from search results — look for the company's own site
+        presence = results.get("company_presence")
+        if presence:
+            company_lower = company_input.name.lower().replace(" ", "")
+            for r in presence.results:
+                try:
+                    from urllib.parse import urlparse
+                    host = urlparse(r.url).netloc.lower().removeprefix("www.")
+                    # Skip social/review sites
+                    skip = [
+                        "facebook.com", "instagram.com", "linkedin.com",
+                        "yelp.com", "google.com", "youtube.com", "tiktok.com",
+                        "twitter.com", "x.com", "tripadvisor.com",
+                    ]
+                    if any(s in host for s in skip):
+                        continue
+                    # Heuristic: domain contains a significant part of the company name
+                    name_parts = company_input.name.lower().split()
+                    if any(part in host for part in name_parts if len(part) > 3):
+                        return host
+                except Exception:
+                    continue
+
+        # 3. Guess common patterns
+        slug = company_input.name.lower().replace(" ", "")
+        for tld in [".com", ".com.au", ".co", ".io", ".ai"]:
+            candidate = slug + tld
+            try:
+                import subprocess
+                out = subprocess.run(
+                    ["dig", "+short", candidate],
+                    capture_output=True, text=True, timeout=5,
+                )
+                if out.stdout.strip():
+                    return candidate
+            except Exception:
+                break  # dig not available, stop guessing
+
+        return None
 
     def _detect_industry(self, company_input: CompanyInput) -> str:
         """Detect company industry via a cheap Perplexity call.
