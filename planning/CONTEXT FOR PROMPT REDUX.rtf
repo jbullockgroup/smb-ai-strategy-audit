@@ -1,0 +1,1165 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2758
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \uc0\u10095  Okay. I ran this particular company in quick mode and the output was 166 files. This is just fucking      \
+overwhelming and not useful at all. Okay. Now I realize that this is a tool that's more oriented towards    \
+enterprise auditing. We've tried to make this more accessible to SMB through the impementation of           \
+/Users/jeff/ai-strategy-factory/planning/NEW-PLAN.md, But obviously, this hasn't really made much of a      \
+difference. Now, I understand that probably a lot of what's happening here has to do with the consulting    \
+guides that are being injected into the prompts. Again, we've tried to mitigate that through this new plan  \
+by including some material that is specifically targeted at small business.                                 \
+                                                                                                            \
+And I just don't see that in the output. This is like for a small business. It's like dropping a nuclear    \
+bomb to kill an ant. So I want to know.                                                                     \
+                                                                                                            \
+Look at all the output. Look at all of the strategy documents that are created. Would there be any way of,  \
+I don't know, maybe creating another document in addition to the final strategy report that is maybe a      \
+summary of all that that's written in, you know, sort of plain language and not all of this fucking         \
+enterprise jargon?                                                                                          \
+                                                                                                            \
+I mean, look, I'm an AI adoption coach. Okay, if I go to a small business and give them 150 page document,  \
+they're going to throw it right in the fucking garbage and say, you know, this is exactly the kind of       \
+bullshit that we don't want to get involved with.                                                           \
+                                                                                                            \
+And I won't get anything out of it. Okay, they won't even look at it. Even, even if there are useful things \
+ in it. They're like a needle in a haystack.                                                                \
+                                                                                                            \
+You can't find them. So look at the reports. Look at the report that was produced. And tell me what my      \
+options are here in terms of an approach to simplify this.                                                  \
+                                                                                                            \
+Is there something maybe that we can put into the prompts that says, you know, dumb all this shit down a    \
+little bit, you know, not so fucking technical and high level? And also, I see stuff in here that is, I     \
+don't know, it seems to me almost, and again, you know, almost to be somewhat dated.                        \
+                                                                                                            \
+And I realize, okay, well, that's because of the information in the consultant guides is perhaps dated.     \
+But, you know, like suggesting that we use make this point, make.com. I, you know, I'm not going to         \
+recommend make.com, maybe in a to in for a particular circumstance. But I don't know, I'm finding this      \
+output just to be kind of useless for my purpose.                                                           \
+                                                                                                            \
+So help me find a way that I can transform this into something useful.                                      \
+\
+\uc0\u9210  Let me look at what was actually produced and what's driving it.\
+\
+\uc0\u9210  Bash(ls -la /Users/jeff/ai-strategy-factory/output/burris-chalmers-communications/markdown/ && echo "---"\
+      && for f in /Users/jeff/ai-strategy-factory/output/burris-c\'85)\
+  \uc0\u9151  \'a0total 632\
+     drwxr-xr-x  17 jeff  staff    544 Mar 29 12:37 .\
+     drwxr-xr-x  10 jeff  staff    320 Mar 29 12:33 ..\
+     \'85 +17 lines (ctrl+o to expand)\
+\
+  Read 1 file (ctrl+o to expand)\
+\
+\uc0\u9210  Let me read the actual output and the prompts driving it.\
+\
+  Read 4 files (ctrl+o to expand)\
+\
+\uc0\u10095  Just Investigate and report. Do not make changes. \
+\
+\uc0\u9210  Now let me look at the prompts and consulting guides driving this.\
+\
+  Read 3 files (ctrl+o to expand)\
+\
+\uc0\u9210  Now let me check the context builder to see what's being injected, and the consulting guides themselves.\
+\
+  Read 2 files (ctrl+o to expand)\
+\
+\uc0\u9210  Now let me look at the SMB guides that are supposed to replace the enterprise ones, and a couple more of\
+  the deliverables.\
+\
+  Read 3 files (ctrl+o to expand)\
+\
+\uc0\u9210  Let me read a few more deliverables to get the full picture.\
+\
+  Read 3 files (ctrl+o to expand)\
+\
+\uc0\u9210  I've read through everything \'97 the 15 deliverables, the prompts, the consulting guides, the audience\
+  system, and the SMB replacement guides. Here's my honest assessment.\
+\
+  ---\
+  Investigation Report: SMB Output Quality\
+\
+  The Scale of the Problem\
+\
+  The Burris Chalmers run produced 15 markdown documents totaling ~280KB / 4,200 lines of content. That's\
+  roughly a 150-page document. For a 1-3 person communications firm in WNC.\
+\
+  What's Actually Happening\
+\
+  The audience system IS having some effect. The output does reference WNC context, mentions specific budget\
+   numbers ($20/month), and uses some accessible language. But it's like putting a friendly label on a\
+  battleship \'97 the structure underneath is still pure enterprise.\
+\
+  The core problem is the prompts themselves. Every prompt template in strategy_factory/synthesis/prompts/\
+  demands enterprise-grade structure:\
+\
+  - quick_wins.py asks for 10 quick wins with comparison matrices, implementation sequences, resource\
+  pooling, escalation paths, and success tracking dashboards\
+  - change_management.py asks for ADKAR models, stakeholder matrices, communication calendars, 4-level\
+  training curricula, and a champions program\
+  - vendor_comparison.py asks for enterprise platform comparisons (Azure, AWS), TCO analysis, and\
+  build-vs-buy frameworks\
+  - data_governance.py asks for governance vision statements, data stewardship roles, and compliance\
+  frameworks\
+\
+  The tone guidance says "accessible, not technical" but the prompt template says "include a stakeholder\
+  matrix and ADKAR model application." The prompt template wins that fight every time. Gemini fills in the\
+  enterprise template with slightly friendlier language, but the structure is identical to what it would\
+  produce for a Fortune 500 company.\
+\
+  Specific Problems in the Output\
+\
+  1. Fictional tech stack \'97 The tech inventory lists HubSpot, Asana/ClickUp, Slack/Teams, QuickBooks,\
+  WordPress, Backblaze... all guessed. It says so: "Assumptions are made based on typical small business\
+  adoption." This is useless for a company-specific strategy.\
+  2. Enterprise frameworks everywhere \'97 ADKAR, KPMG TACO, maturity models, governance structures. A solo\
+  operator or 3-person firm doesn't need a "Data Lead," "Domain Stewards," or a "4-level training\
+  curriculum."\
+  3. Make.com / Zapier recommendations \'97 As you noted, not what you'd recommend for these clients.\
+  4. Massive redundancy \'97 ChatGPT Plus is recommended in at least 5 documents. The same WNC framing appears\
+  in every executive summary. The same 2-3 tool names recur everywhere.\
+  5. Questionable value in several documents \'97 "License Consolidation" for a company with maybe 5 SaaS\
+  subscriptions? "Data Governance Framework" with org charts? "Change Management Playbook" with\
+  communication calendars for a team that probably sits in the same room?\
+  6. The SMB guides are better but can't overcome the prompts \'97 The 3 SMB guides (smb-ai-playbook.md,\
+  smb-ai-value-playbook.md, ai-implementation-steps-smb.md) are actually decent. They have relevant\
+  frameworks like the "80/15/5 Rule" and "BCG's 10-20-70 Rule." But they're injected as "Consulting\
+  Knowledge Base" context alongside the prompt templates that still demand enterprise structure.\
+\
+  Your Options (ranked by impact vs. effort)\
+\
+  Option A: Add a "Plain English Action Plan" deliverable (new 16th doc)\
+\
+  Add a post-processing step that synthesizes all 15 documents into a 3-5 page plain-language brief:\
+  - "3 things to do this month, here's exactly how"\
+  - "What it costs (total: $X/month)"\
+  - "What you get (hours saved, revenue gained)"\
+  - "Step-by-step: open this tool, type this prompt, get this result"\
+\
+  This is the "hand the client something they'll actually read" option. Doesn't change any existing\
+  deliverables. One new prompt, one new deliverable entry in config. Effort: Low. Impact: High.\
+\
+  Option B: Rewrite the prompts to be audience-aware\
+\
+  Add conditional instructions to each prompt so that when an SMB audience is active, the structure changes\
+  dramatically \'97 shorter documents, fewer sections, no enterprise frameworks, concrete tool names with\
+  prices, "do this, not that" format.\
+\
+  The current prompt templates are the root cause. They're 100% enterprise regardless of audience. This\
+  would fix that at the source. Effort: Medium-High (15 prompts to revise). Impact: Very High.\
+\
+  Option C: Reduce deliverable count for SMB audiences\
+\
+  When an SMB audience is active, skip the less relevant documents entirely. For a small business, these are\
+   probably unnecessary:\
+  - 07_vendor_comparison (they're not comparing Azure vs AWS)\
+  - 08_license_consolidation (they have 5 subscriptions, not 50)\
+  - 11_data_governance (org chart governance is meaningless)\
+  - 13_glossary (they can Google terms)\
+  - 15_change_management (ADKAR for a 3-person team is absurd)\
+\
+  This reduces the output from 15 docs to ~10, which is still a lot but less overwhelming. Effort: Low.\
+  Impact: Medium.\
+\
+  Option D: Create a parallel "SMB track" with different deliverables entirely\
+\
+  Instead of the current 15 enterprise deliverables, create a separate set of 5-6 SMB-specific deliverables:\
+  1. Where You Stand (simplified assessment)\
+  2. What To Do First (3 quick wins with exact steps)\
+  3. The Plan (plain language 30/60/90 day roadmap)\
+  4. What It Costs (budget breakdown with specific tools and prices)\
+  5. Cheat Sheet (prompts and tool tips they can use today)\
+\
+  This would be a separate config and prompt set, reusing the same research/synthesis infrastructure.\
+  Effort: High. Impact: Very High.\
+\
+  My Recommendation\
+\
+  Do Option A first, then Option B. Option A gives you something immediately usable \'97 a short document you\
+  can actually hand to a client. Option B fixes the root cause over time.\
+\
+  Option D is the right long-term architecture, but it's a bigger project. Options A+B together get you 80%\
+  of the value for 20% of the effort.\
+\
+  One More Thing\
+\
+  The Tone Guidance in mountain_bizworks_scaleup.md is actually well-written \'97 it says all the right things\
+  ("accessible not technical," "concrete over abstract," "respect the hustle"). The problem is that Gemini\
+  treats tone guidance as a suggestion and the prompt template's structural requirements as requirements. To\
+   make tone guidance actually work, the prompts themselves need to change, not just the tone overlay.\
+\
+\uc0\u10043  Cooked for 11m 57s\
+\
+\uc0\u10095  Okay, so I understand your suggestions and I basically agree with all of them. The question that I have   \
+about option D is that's almost like developing a new app, right? And so why would I build in a different   \
+track to this project? Why not just create a new project?                                                   \
+                                                                                                            \
+If we did that, could we use this project as the template to get to the option D result, which would be AI  \
+auditing app for small business? Now, if we were to follow that, create a new project, a new app using this \
+ project as a model, would we still use the same consulting guides?                                         \
+                                                                                                            \
+Those need to be re-researched because just to find the three articles that were part of the most recently  \
+implemented plan was difficult. It's difficult to find good AI implementation guides for small business     \
+that aren't really enterprise documents that somebody's just put small business in the header. So give me   \
+your thoughts about that.                                                                                   \
+                                                                                                            \
+Just investigate and report. Don't make changes.                                                            \
+\
+\uc0\u9210  Good question. Let me think through the architecture honestly.\
+\
+  Searched for 2 patterns (ctrl+o to expand)\
+\
+\uc0\u9210  Here's my analysis.\
+\
+  ---\
+  Same App vs. New App\
+\
+  You're right \'97 building an SMB "track" inside this app would be building a second app inside the first\
+  one. Here's why it gets ugly:\
+\
+  What's fundamentally different about an SMB version:\
+\
+  \uc0\u9484 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9516 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9516 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9488 \
+  \uc0\u9474       Layer      \u9474        Current (Enterprise)       \u9474                   SMB Version                  \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  Deliverables    \u9474  15 documents                     \u9474  5-6 documents (different ones)                \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  Prompts         \u9474  15 enterprise templates          \u9474  5-6 plain-language templates (completely      \u9474 \
+  \uc0\u9474                  \u9474                                   \u9474  different)                                    \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  Research        \u9474  9-18 enterprise queries          \u9474  Probably 5-8 simpler queries (different       \u9474 \
+  \uc0\u9474  queries         \u9474                                   \u9474  questions)                                    \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  Consulting      \u9474  10 enterprise consulting firm    \u9474  Different knowledge base entirely             \u9474 \
+  \uc0\u9474  guides          \u9474  summaries                        \u9474                                                \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  Output format   \u9474  Full PPTX decks, formal DOCX     \u9474  Maybe a one-page action plan, a checklist, a  \u9474 \
+  \uc0\u9474                  \u9474  reports                          \u9474  tool guide                                    \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  Tone            \u9474  Professional consulting          \u9474  Plain English, like talking to a friend who   \u9474 \
+  \uc0\u9474                  \u9474                                   \u9474  knows tech                                    \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  Cost model      \u9474  $35K base SOW                    \u9474  Probably $500-2K engagement range             \u9474 \
+  \uc0\u9492 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9524 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9524 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9496 \
+\
+  If you put both tracks in one app, every file becomes conditional: if mode == 'smb': ... else: .... The\
+  config, the prompts, the research queries, the generators, the webapp UI \'97 all forked. That's not a\
+  feature flag, that's two apps sharing a Git repo and fighting each other.\
+\
+  What's genuinely reusable from this project:\
+\
+  The plumbing. About 60% of the codebase is infrastructure that's mode-agnostic:\
+\
+  - research/perplexity_client.py \'97 API wrapper, works for any queries\
+  - research/orchestrator.py \'97 Research pipeline, just needs different queries\
+  - synthesis/gemini_client.py \'97 API wrapper, works for any prompts\
+  - synthesis/context_builder.py \'97 Template engine for assembling prompts\
+  - synthesis/orchestrator.py \'97 Synthesis pipeline\
+  - generation/pptx_generator.py, docx_generator.py, pdf_generator.py \'97 Document generators\
+  - generation/mermaid_renderer.py \'97 Diagram rendering\
+  - progress_tracker.py \'97 State management\
+  - knowledge_loader.py \'97 Loads consulting guides from disk\
+  - models.py \'97 Data models (CompanyInput, ResearchOutput, etc.)\
+  - webapp.py \'97 Flask app, SSE progress streaming, file serving\
+\
+  Roughly ~9,000 of the ~15,000 lines are reusable infrastructure. The other ~6,000 are the\
+  enterprise-specific layer: prompts, queries, deliverable configs, result processing tuned for enterprise\
+  outputs.\
+\
+  The cleanest architecture: Fork this repo as a starting point. Keep the infrastructure layer. Replace the\
+  content layer (prompts, queries, guides, deliverable definitions, result processing). That way you're not\
+  maintaining two codepaths in one codebase, and each app can evolve independently.\
+\
+  ---\
+  The Consulting Guide Problem\
+\
+  This is the harder problem, and you've already discovered why: there genuinely isn't much good\
+  SMB-specific AI content out there. Most of what exists falls into three categories:\
+\
+  1. Enterprise content with "SMB" in the title \'97 Repackaged McKinsey/BCG frameworks. "Here's how to\
+  implement AI" that assumes a CTO, a data team, and a $500K budget.\
+  2. Tool vendor marketing \'97 "How to use AI in your small business" that's really a ChatGPT sales pitch or a\
+   Zapier tutorial. No strategic framework, just "buy our thing."\
+  3. Surface-level blog posts \'97 "10 AI tools for small business" listicles. No depth, no methodology, no\
+  implementation guidance.\
+\
+  The three guides you found (smb-ai-playbook.md, smb-ai-value-playbook.md, ai-implementation-steps-smb.md)\
+  are better than most \'97 they have real frameworks (BCG 10-20-70, the 80/15/5 rule) and actual statistics.\
+  But they're still limited, and as you noted, they took significant effort to find.\
+\
+  For an SMB app, you probably need a different approach to the knowledge base\
+\
+  Instead of loading consulting firm summaries (which are all enterprise by nature), consider:\
+\
+  Option 1: Build a curated tool/practice database instead of consulting guides\
+  - A structured knowledge base of: tool name, price, what it does, who it's for, how to set it up\
+  - Specific prompts and workflows for common SMB tasks (social media, email, invoicing, scheduling)\
+  - Case studies from actual small businesses (not Fortune 500)\
+\
+  This is more like a "practitioner's reference" than a consulting guide. You could build it from real-world\
+   use, your own coaching experience, and community resources.\
+\
+  Option 2: Use live web research instead of static guides\
+  - The current app uses Perplexity for research, then loads static consulting guides into the prompt\
+  - For SMB, you could run additional Perplexity queries at synthesis time: "What are the best AI tools\
+  under $30/month for [specific task] in 2026?"\
+  - This keeps recommendations current without needing to maintain static guides\
+\
+  Option 3: Inject your own expertise as the "guide"\
+  - You're the AI adoption coach. Your knowledge and judgment about what works for small businesses is the\
+  actual differentiator.\
+  - Write a set of "coach notes" \'97 not consulting firm summaries, but practical guidance from your\
+  experience\
+  - Things like: "Don't recommend Make.com to a non-technical owner. Recommend Zapier if they need\
+  automation, but honestly most SMBs should start with native integrations in tools they already have."\
+  - This would be more opinionated and more useful than any consulting guide.\
+\
+  Option 3 is probably the most valuable because it captures YOUR expertise, which is the thing that can't\
+  be replicated by another AI tool. The consulting guides in the current app are essentially commodity\
+  knowledge \'97 any AI can read a McKinsey report. But your specific recommendations about what works for a\
+  3-person cleaning company in WNC \'97 that's unique.\
+\
+  ---\
+  Summary\
+\
+  \uc0\u9484 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9516 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9488 \
+  \uc0\u9474       Question       \u9474                                     Answer                                     \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  Separate app or SMB \u9474  Separate app. Two tracks in one codebase = two apps fighting each other.      \u9474 \
+  \uc0\u9474   track?             \u9474                                                                                \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  Can this project be \u9474  Yes. Fork it, keep the ~9K lines of infrastructure, replace the ~6K lines of  \u9474 \
+  \uc0\u9474   a template?        \u9474  enterprise content.                                                           \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  Same consulting     \u9474  No. Enterprise consulting guides are the wrong knowledge source for SMB.      \u9474 \
+  \uc0\u9474  guides?             \u9474  Replace with practitioner content, live research, or your own coaching        \u9474 \
+  \uc0\u9474                      \u9474  expertise.                                                                    \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474                      \u9474  The knowledge base. Finding/good SMB AI content is hard. You may need to      \u9474 \
+  \uc0\u9474  Biggest risk?       \u9474  create it from your own experience rather than curating it from existing      \u9474 \
+  \uc0\u9474                      \u9474  sources.                                                                      \u9474 \
+  \uc0\u9492 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9524 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9496 \
+\
+\uc0\u10043  Cogitated for 3m 3s\
+\
+\uc0\u10095  Okay, so I've spent some time this afternoon looking through YouTube videos to try to find something      \
+that's appropriate for small business. I found a couple of things, but really nothing that I think is       \
+complete enough to use as the knowledge base for a new app. So, you know, I've even given some              \
+consideration to putting some video into Notebook LM and then putting the client's website into Notebook    \
+LM, trying to do some kind of a role play with it, an interview style, because that's really what, you      \
+know, a true AI audit would be, is going into a company and talking to the pain points are.                 \
+                                                                                                            \
+What we're trying to do here, for the most part, is guess. And I think for an entry-level deliverable,      \
+that's just fine. I can put some context into this app for sure, but I can't do that. I can't, obviously,   \
+for this particular project, give interview-type answers, because we're doing this just based off of what   \
+we can find out about it.                                                                                   \
+                                                                                                            \
+So, given all of that, I think probably doing your options A, B, and C is going to have to, in this case, I \
+ don't think developing a separate app is feasible. So, let's look at the prompts. Let's think about the    \
+prompts and see how we can word these better so that they're a little bit more small business.              \
+                                                                                                            \
+And, you know, I don't even so much. One of the things that I keep seeing in these reports is, you know,    \
+reports is to Azure and AWS, I don't want to be recommending them. I don't really want to be recommending a \
+ whole lot of tweaking and the costs and so on.                                                             \
+                                                                                                            \
+I really want to look more at the kinds of pain points that businesses have. A lot of most intuiting what   \
+the common problems are. And they're going to be around things like use a voice AI chatbot in some site or  \
+field calls, email sorting and responding, scheduling, content production, website development, SEO audit,  \
+something quick, like a lighthouse, and making proposals.                                                   \
+                                                                                                            \
+So, can we kind of think around those things? Is there any way that we can redo the prompts, get this more  \
+in line with what I need to answer? Don't make changes.                                                     \
+\
+\uc0\u9210  Let me look at all 15 prompts to understand what we're working with, then think through how they map to\
+  what you actually need.\
+\
+\uc0\u9210  Explore(Read all 15 prompt files)\
+  \uc0\u9151  \'a0Done (15 tool uses \'b7 87.2k tokens \'b7 7m 1s)\
+  (ctrl+o to expand)\
+\
+  Read 12 files (ctrl+o to expand)\
+\
+\uc0\u9210  I've now read all 15 prompts front to back. Here's my honest assessment.\
+\
+  ---\
+  The Prompts: What's Wrong and What Can Be Done\
+\
+  The Core Problem\
+\
+  These prompts aren't just "enterprise-flavored" \'97 they're architecturally enterprise. The structure, the\
+  sections, the frameworks requested \'97 they're baked into the prompt templates themselves. No amount of tone\
+   guidance layered on top will stop Gemini from producing a stakeholder matrix when the prompt says "Create\
+   a stakeholder matrix."\
+\
+  Categorizing the 15 Prompts\
+\
+  Tier 1: Worth rewriting, core value (4 prompts)\
+\
+  These address real needs. They just need to be completely rewritten, not tweaked.\
+\
+  Current Prompt: 01_tech_inventory\
+  What It Asks For: Data Infrastructure Assessment, Data Quality Indicators, Integration Landscape, Compute\
+    Infrastructure readiness\
+  What It Should Ask For: "What tools is this business probably using? What AI features are already built in\
+\
+    that they don't know about? What's still manual that shouldn't be?"\
+  \uc0\u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+  Current Prompt: 02_pain_points\
+  What It Asks For: 6 department matrices (Sales, Ops, Finance, HR, Customer Service, IT), cross-functional\
+    pain points, 2x2 prioritization\
+  What It Should Ask For: "What are the biggest time-wasters for this specific type of business? Focus on:\
+    email, scheduling, content creation, customer calls, proposals, invoicing, website/SEO. Where are they\
+    losing hours to stuff AI can do in minutes?"\
+  \uc0\u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+  Current Prompt: 06_quick_wins\
+  What It Asks For: 10 quick wins with comparison matrices, implementation sequences, resource pooling,\
+    escalation paths, success tracking dashboards\
+  What It Should Ask For: "5 specific things to do this month. For each: what tool, what it costs, what to\
+    type into it, and what you get back. Total budget under $100/month."\
+  \uc0\u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+  Current Prompt: 12_prompt_library\
+  What It Asks For: Prompts organized by enterprise departments (Sales, Customer Service, Operations,\
+    Finance, HR, Engineering)\
+  What It Should Ask For: Ready-to-use prompts for the tasks SMB owners actually do: write a social media\
+    post, respond to a customer email, draft a proposal, write a follow-up, summarize a meeting, create an\
+    invoice reminder\
+\
+  Tier 2: Keep concept, gut the content (2 prompts)\
+\
+  Current Prompt: 05_roadmap\
+  Problem: 5 phases (Foundation \uc0\u8594  Transform), steering committees, Centers of Excellence, "AI governance\
+    framework"\
+  What It Should Be: A simple week-by-week plan: "Week 1: sign up for this. Week 2: use it for this. Week 3:\
+\
+    add this. Month 2: add this." No phases, no committees, no "Transformation Initiatives" table.\
+  \uc0\u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+  Current Prompt: 09_roi_calculator\
+  Problem: NPV with discount rates, sensitivity analysis, 3-year TCO, industry benchmarks\
+  What It Should Be: "Hours saved \'d7 what your time is worth. Here's the monthly subscription cost. Here's\
+    when you break even." Simple math that a business owner can verify in their head.\
+\
+  Tier 3: Skip entirely for SMB (9 prompts)\
+\
+  \uc0\u9484 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9516 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9488 \
+  \uc0\u9474           Prompt          \u9474                                  Why Skip                                  \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474                           \u9474  Architecture diagrams are meaningless to SMB owners. They want to know    \u9474 \
+  \uc0\u9474  03_mermaid_diagrams      \u9474  what to buy, not see a system architecture. Also the Mermaid syntax keeps \u9474 \
+  \uc0\u9474                           \u9474   breaking.                                                                \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  04_maturity_assessment   \u9474  BCG maturity curve, 7-dimension scoring, radar charts. Pure enterprise    \u9474 \
+  \uc0\u9474                           \u9474  consulting artifact.                                                      \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  07_vendor_comparison     \u9474  Compares Azure, AWS, Anthropic enterprise offerings. Irrelevant. SMB buys \u9474 \
+  \uc0\u9474                           \u9474   ChatGPT Plus or doesn't.                                                 \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  08_license_consolidation \u9474  Enterprise Agreement negotiations, Microsoft 365 E5 bundling. A company   \u9474 \
+  \uc0\u9474                           \u9474  with 5 subscriptions doesn't need this.                                   \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474                           \u9474  Full corporate AI acceptable use policy with data classification, review  \u9474 \
+  \uc0\u9474  10_ai_policy             \u9474  matrices, governance committees. A one-page "don't put customer data in   \u9474 \
+  \uc0\u9474                           \u9474  ChatGPT" guideline would be more appropriate.                             \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  11_data_governance       \u9474  Data Governance Council, Chief Data Officer, Domain Stewards, data        \u9474 \
+  \uc0\u9474                           \u9474  lifecycle management, metadata standards. Absurd for a 3-person company.  \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  13_glossary              \u9474  They can Google terms. A glossary is padding, not value.                  \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  14_use_case_library      \u9474  20 use cases across departments with KPMG TACO framework. Should be       \u9474 \
+  \uc0\u9474                           \u9474  replaced by the pain points + quick wins \'97 those ARE the use cases.       \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474                           \u9474  ADKAR model, communication calendars, 4-level training curriculum, AI     \u9474 \
+  \uc0\u9474  15_change_management     \u9474  Champions program. For a company where "change management" means the      \u9474 \
+  \uc0\u9474                           \u9474  owner tries a new tool on Tuesday.                                        \u9474 \
+  \uc0\u9492 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9524 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9496 \
+\
+  What the Rewritten Prompts Should Focus On\
+\
+  Based on what you described as the real SMB pain points, the prompts should center on these specific task\
+  areas:\
+\
+  1. Voice AI / Chatbot \'97 "Can AI answer my phone / website chat so I stop missing leads?"\
+  2. Email sorting & responding \'97 "Can AI help me get through my inbox faster?"\
+  3. Scheduling \'97 "Can AI book appointments without the back-and-forth?"\
+  4. Content production \'97 "Can AI write my social media posts / blog / newsletter?"\
+  5. Website / SEO \'97 "Can AI tell me what's wrong with my website and how to fix it?"\
+  6. Proposals & quotes \'97 "Can AI help me respond to leads faster with better proposals?"\
+  7. Invoicing & follow-up \'97 "Can AI help me get paid faster?"\
+  8. Customer communication \'97 "Can AI help me stay in touch with customers without spending hours?"\
+\
+  These are things a small business owner wakes up worrying about. Not "data governance maturity" or\
+  "license consolidation opportunities."\
+\
+  How to Implement Options A+B+C Together\
+\
+  Option C (reduce deliverables): Skip the 9 Tier 3 prompts when an SMB audience is active. This alone cuts\
+  output from ~280KB to ~100KB.\
+\
+  Option B (rewrite prompts): Rewrite the 6 Tier 1+2 prompts to be SMB-focused. These are the prompts that\
+  actually drive value. The rewrites aren't tweaks \'97 they're replacements. Different sections, different\
+  language, different structure.\
+\
+  Option A (add summary): After the 6 rewritten deliverables are generated, run one final synthesis pass\
+  that produces a 2-3 page "Here's Your Action Plan" \'97 the one document you actually hand to the client.\
+\
+  The Good News\
+\
+  The prompt rewrites are straightforward work. The current prompts are all in\
+  strategy_factory/synthesis/prompts/ as Python files containing a single PROMPT string. Each one is\
+  self-contained. Rewriting a prompt doesn't touch any other code \'97 no orchestrator changes, no config\
+  changes (for the content), no pipeline changes.\
+\
+  The harder part is the config: making the system skip deliverables conditionally based on audience. That's\
+   a code change in config.py and potentially in the synthesis orchestrator to filter the deliverable list.\
+\
+  The Specific Tool Problem\
+\
+  You mentioned not wanting to recommend Make.com, Azure, AWS, etc. The current prompts are vendor-agnostic\
+  by design \'97 they ask Gemini to "recommend tools" without guidance. Gemini defaults to the most commonly\
+  mentioned tools in its training data, which means Zapier, Make.com, Azure, etc.\
+\
+  The fix is to be opinionated in the prompts. Instead of "recommend AI/automation tools," say things like:\
+\
+  \uc0\u9614  "Recommend specific tools the owner can start using today. Prefer tools that are simple to set up\
+  without technical knowledge. Avoid recommending complex automation platforms (Zapier, Make.com) unless the\
+   business has someone technical on staff. Focus on tools with free tiers or simple monthly pricing under\
+  $30/month. Good examples: ChatGPT Plus for content and email, Calendly for scheduling, Canva for design,\
+  Google's built-in AI features."\
+\
+  This is where your own expertise becomes the guide \'97 you can inject your preferences directly into the\
+  prompts. The consulting guides don't need to tell Gemini what to recommend when YOU can tell it directly\
+  through the prompt.\
+\
+\uc0\u10043  Cogitated for 9m 33s\
+\
+\uc0\u10095  Okay, so what if I just wanted to make this specifically for my use case for SMB, right? Rather than try  \
+to do anything conditionally based on the audience, let's just abandon the whole enterprise concept of it   \
+altogether. Maybe we still use the guides if that makes sense to do so, but we just abandon all the         \
+conditionality or whatever and just focus on this cohort.                                                   \
+                                                                                                            \
+Can we do that? Can that be done? Investigate and report. Don't make any change.                            \
+\
+\uc0\u9210  Let me trace through exactly what would need to change to convert this from a conditional SMB-mode to a\
+  pure SMB app.\
+\
+  Read 3 files (ctrl+o to expand)\
+\
+\uc0\u9210  Here's my analysis.\
+\
+  ---\
+  Can We Go Pure SMB? Yes \'97 and It's Simpler Than You'd Think\
+\
+  What "Pure SMB" Means Technically\
+\
+  Remove all conditional logic (audience system, guide overrides, mode detection). Hardcode the app to\
+  produce 6 SMB deliverables with SMB prompts, SMB consulting guides, and SMB research queries. No if\
+  audience_id anywhere.\
+\
+  The Change Map\
+\
+  Files that need content changes (the "SMB layer"):\
+\
+  \uc0\u9484 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9516 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9516 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9488 \
+  \uc0\u9474              File             \u9474                    What Changes                   \u9474       Effort       \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474                               \u9474  Replace 15 enterprise DELIVERABLES with ~6 SMB   \u9474  Low \'97 it's just a \u9474 \
+  \uc0\u9474  config.py                    \u9474  ones. Remove SOW pricing, company size tiers.    \u9474   dict             \u9474 \
+  \uc0\u9474                               \u9474  Update guide references.                         \u9474                    \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474                               \u9474  Delete 9 enterprise prompts. Rewrite 6 prompts   \u9474  Medium-High \'97     \u9474 \
+  \uc0\u9474  synthesis/prompts/*.py       \u9474  from scratch for SMB. Update __init__.py to      \u9474  this is the real  \u9474 \
+  \uc0\u9474                               \u9474  match.                                           \u9474  work              \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474                               \u9474  Update GENERATION_ORDER for 6 deliverables       \u9474                    \u9474 \
+  \uc0\u9474  synthesis/orchestrator.py    \u9474  instead of 15. Remove audience logic from        \u9474  Low               \u9474 \
+  \uc0\u9474                               \u9474  _get_system_instruction.                         \u9474                    \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  synthesis/context_builder.py \u9474  Remove audience injection logic. Simplify        \u9474  Low               \u9474 \
+  \uc0\u9474                               \u9474  _load_tldr_knowledge (no override logic needed). \u9474                    \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  research/orchestrator.py     \u9474  Remove audience query phase. Optionally simplify \u9474  Low               \u9474 \
+  \uc0\u9474                               \u9474   research queries for SMB.                       \u9474                    \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474                               \u9474  Remove audience dropdown from form. Remove       \u9474                    \u9474 \
+  \uc0\u9474  webapp.py                    \u9474  audience from run_pipeline. Everything else      \u9474  Low               \u9474 \
+  \uc0\u9474                               \u9474  auto-adapts from config.                         \u9474                    \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  progress_tracker.py          \u9474  No changes \'97 it reads from DELIVERABLES config   \u9474  None              \u9474 \
+  \uc0\u9474                               \u9474  dynamically                                      \u9474                    \u9474 \
+  \uc0\u9492 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9524 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9524 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9496 \
+\
+  Files that need NO changes (the infrastructure \'97 leave them alone):\
+\
+  \uc0\u9484 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9516 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9488 \
+  \uc0\u9474                File               \u9474                           Why No Changes                           \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  gemini_client.py                 \u9474  API wrapper, works for any prompts                                \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  perplexity_client.py             \u9474  API wrapper, works for any queries                                \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  knowledge_loader.py              \u9474  Loads whatever guides are in the folder                           \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  models.py                        \u9474  Data models are generic enough (could optionally remove audience  \u9474 \
+  \uc0\u9474                                   \u9474  field)                                                            \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  generation/pptx_generator.py     \u9474  Generates PPTX from whatever content it gets                      \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  generation/docx_generator.py     \u9474  Generates DOCX from whatever content it gets                      \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  generation/pdf_generator.py      \u9474  Generates PDF from whatever content it gets                       \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  generation/markdown_generator.py \u9474  Saves whatever markdown it gets                                   \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  generation/mermaid_renderer.py   \u9474  Renders whatever diagrams are requested (or none)                 \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  generation/orchestrator.py       \u9474  Reads from DELIVERABLES config \'97 auto-adapts                      \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  temporal.py                      \u9474  Date utility, nothing enterprise about it                         \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  research/query_templates.py      \u9474  Could be simplified but works as-is                               \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  research/result_processor.py     \u9474  Processes research generically                                    \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  research/model_selector.py       \u9474  Picks Perplexity models, nothing enterprise                       \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  audience_loader.py               \u9474  Can be deleted entirely                                           \u9474 \
+  \uc0\u9492 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9524 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9496 \
+\
+  The Proposed SMB Deliverable Set\
+\
+  Replace 15 enterprise deliverables with these 6:\
+\
+  \uc0\u9484 \u9472 \u9472 \u9472 \u9472 \u9472 \u9516 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9516 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9516 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9488 \
+  \uc0\u9474   #  \u9474           ID           \u9474          Name         \u9474               What It Actually Is               \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474      \u9474                        \u9474  "What You're Using & \u9474  Practical inventory: what tools they have,     \u9474 \
+  \uc0\u9474  1   \u9474  01_tools_audit        \u9474   What's Missing"     \u9474  what AI features they're not using, what's     \u9474 \
+  \uc0\u9474      \u9474                        \u9474                       \u9474  missing                                        \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474      \u9474                        \u9474  "Where You're Losing \u9474  The real time-wasters: email, scheduling,      \u9474 \
+  \uc0\u9474  2   \u9474  02_daily_pain_points  \u9474   Time"               \u9474  content, phone calls, proposals, invoicing \'97   \u9474 \
+  \uc0\u9474      \u9474                        \u9474                       \u9474  with specific fixes                            \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  3   \u9474  03_action_plan        \u9474  "What To Do This     \u9474  5 specific things to start doing, with tool    \u9474 \
+  \uc0\u9474      \u9474                        \u9474  Month"               \u9474  names, costs, and exact steps                  \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474      \u9474                        \u9474  "Your Week-by-Week   \u9474  Week 1: do this. Week 2: add this. Month 2:    \u9474 \
+  \uc0\u9474  4   \u9474  04_simple_roadmap     \u9474  Plan"                \u9474  add this. Plain language, no phases or         \u9474 \
+  \uc0\u9474      \u9474                        \u9474                       \u9474  committees                                     \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474      \u9474                        \u9474  "Copy-Paste AI       \u9474  Ready-to-use prompts for the tasks they        \u9474 \
+  \uc0\u9474  5   \u9474  05_prompt_cheat_sheet \u9474  Prompts"             \u9474  actually do: write a post, respond to an       \u9474 \
+  \uc0\u9474      \u9474                        \u9474                       \u9474  email, draft a proposal                        \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  6   \u9474  06_roi_snapshot       \u9474  "What This Costs &   \u9474  Simple math: hours saved \'d7 hourly rate vs.     \u9474 \
+  \uc0\u9474      \u9474                        \u9474  What You Save"       \u9474  monthly tool costs. When you break even.       \u9474 \
+  \uc0\u9492 \u9472 \u9472 \u9472 \u9472 \u9472 \u9524 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9524 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9524 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9496 \
+\
+  Optionally add a 7th as the "hand the client" document:\
+\
+  | 7 | 07_executive_brief | "Your AI Action Plan" (1-pager) | The 2-3 page plain-language summary that\
+  distills everything above into one document you can hand to a business owner |\
+\
+  The Prompt Rewrite Effort\
+\
+  This is the real work. The 6 new prompts need to be written from scratch. But here's the thing \'97 they'd be\
+   shorter than the current prompts because you're asking for simpler output.\
+\
+  Current quick_wins.py prompt: 136 lines asking for 10 quick wins with matrices, escalation paths,\
+  dashboards.\
+\
+  SMB 03_action_plan.py prompt might be 40-50 lines: "Give me 5 things to do this month. For each: what\
+  tool, what it costs, what to type, what you get back. Total budget under $100/month."\
+\
+  The prompts would encode your expertise directly \'97 your preferences for tools, your knowledge of what\
+  works for SMB, your aversion to Make.com. The consulting guides become secondary when the prompt itself is\
+   opinionated.\
+\
+  The Consulting Guides\
+\
+  With a pure SMB app, you have three options:\
+\
+  Option 1: Keep the 3 SMB guides, drop the enterprise ones\
+  - Use smb-ai-playbook.md, smb-ai-value-playbook.md, ai-implementation-steps-smb.md as the only guides\
+  - They're decent and contain useful frameworks (BCG 10-20-70, SMB 80/15/5)\
+  - Delete or ignore the enterprise guides (BCG, McKinsey, KPMG, etc.)\
+  - The guides would be loaded for specific deliverables via the config, same as now\
+\
+  Option 2: Drop guides entirely, encode your expertise in the prompts\
+  - The prompts themselves become the "guide" \'97 your tool preferences, your cost expectations, your\
+  recommendations\
+  - This is simpler to maintain and more current (guides get dated, prompts can be updated easily)\
+  - But you lose the consulting frameworks and statistics that give the output substance\
+\
+  Option 3: Hybrid \'97 keep the 3 SMB guides + make the prompts opinionated\
+  - Use the SMB guides for frameworks and data points\
+  - Make the prompts directive about specific tools, costs, and approaches\
+  - This gives you both the structured knowledge from the guides AND your personal expertise in the prompts\
+\
+  I'd recommend Option 3. The SMB guides are useful for giving Gemini substance (the statistics, the\
+  frameworks), while the prompts control the structure and recommendations.\
+\
+  What About the PPTX/DOCX/PDF Generators?\
+\
+  These work on whatever content they receive. The pptx_generator.py generates an "Executive Summary Deck"\
+  and a "Full Findings Presentation" \'97 for SMB you could simplify these to produce one shorter deck instead\
+  of two. But the generators themselves don't need to know anything about SMB vs enterprise. They just\
+  format whatever markdown they're given into slides/documents.\
+\
+  The DOCX/PDF generators are the same \'97 they produce a "Final Strategy Report" from whatever deliverables\
+  exist. With 6 SMB deliverables, the report would be shorter and more focused automatically.\
+\
+  Research Queries\
+\
+  The current research queries in research/orchestrator.py run 6 phases: company overview,\
+  leadership/funding, industry, competitors, tech landscape, regulations. For SMB, you could:\
+\
+  - Keep as-is \'97 the research still works fine for gathering company context\
+  - Simplify \'97 skip the "regulatory context" phase, skip "competitive intelligence" (SMBs don't need Azure\
+  vs AWS comparisons)\
+  - Add SMB-specific queries \'97 "affordable AI tools for [industry] small businesses," "common pain points\
+  for [industry] businesses under 10 employees"\
+\
+  The research phase is the least problematic part. It's generic enough to work for any company.\
+\
+  Estimated Scope\
+\
+  \uc0\u9484 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9516 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9488 \
+  \uc0\u9474                      Task                     \u9474         Effort        \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  Write 6 new SMB prompts                      \u9474  The bulk of the work \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  Update config.py deliverables                \u9474  30 minutes           \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  Update synthesis/orchestrator.py             \u9474  15 minutes           \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  Simplify context_builder.py                  \u9474  15 minutes           \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  Simplify webapp.py                           \u9474  15 minutes           \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  Delete audience_loader.py and audience files \u9474  5 minutes            \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  Clean up consulting guides folder            \u9474  5 minutes            \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  Test with a real company run                 \u9474  30 minutes           \u9474 \
+  \uc0\u9492 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9524 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9496 \
+\
+  The prompts are 80% of the effort. Everything else is config cleanup and removing conditional code. The\
+  infrastructure stays untouched.\
+\
+  Bottom Line\
+\
+  Yes, this can absolutely be done. The app's architecture separates infrastructure from content cleanly.\
+  The infrastructure layer (research, synthesis pipeline, document generation, web app) doesn't care whether\
+   you're producing enterprise deliverables or SMB ones. The content layer (prompts, config, guides) is what\
+   defines the output.\
+\
+  Going pure SMB means: delete 9 prompts, rewrite 6, update one config dict, remove the audience system,\
+  keep the enterprise guides out. Everything else stays.\
+\
+\uc0\u10043  Cogitated for 1m 34s\
+\
+\uc0\u10095  Okay, well, so far as the guides go, I have to say that I don't feel like I have really adequate          \
+expertise to offer in this particular situation. So is this the kind of thing that you could ask me         \
+questions to get that knowledge out of me about? Or is this something that you could go and research?       \
+                                                                                                            \
+Answer my question. Report back. Don't make changes.                                                        \
+\
+\uc0\u9210  Both. And I'd recommend doing them together.\
+\
+  What I can research: Current AI tool landscape for SMB \'97 what tools exist, what they cost, what they're\
+  good at, what's new. I can find real pricing, real reviews, real comparisons. I can also research common\
+  SMB pain points by industry, typical tool adoption patterns, and what's actually working for small\
+  businesses right now. This grounds the prompts in current reality rather than whatever Gemini's training\
+  data says.\
+\
+  What I'd need from you: Your opinions and preferences \'97 the stuff that can't be Googled. Things like:\
+\
+  - Which tools do you actually recommend vs. which you'd avoid? (You already said no Make.com \'97 what else\
+  is on that list?)\
+  - What price range feels right for these clients? Is $20/month the ceiling? Is $50/month too much for\
+  some?\
+  - What's the typical tech comfort level? Can you hand them a ChatGPT login or do they need something\
+  simpler?\
+  - Which of the 7 pain point areas I listed (voice/chat, email, scheduling, content, website, proposals,\
+  invoicing) are you most confident advising on?\
+  - Are there industries in this cohort where you'd give fundamentally different advice? (A yarn shop vs. a\
+  cleaning company vs. a communications firm)\
+  - What's your delivery format? Do you sit down with them and walk through it? Hand them a PDF and follow\
+  up by phone? This shapes how the output should be structured.\
+\
+  The approach I'd suggest:\
+\
+  1. I research the current SMB AI tool landscape and compile what I find\
+  2. I interview you (here, in conversation) to get your preferences and judgments\
+  3. I combine both into the prompts \'97 research for accuracy, your input for opinion and authenticity\
+\
+  The prompts work best when they have a strong point of view. Right now they're written in neutral\
+  consulting-speak. The SMB version should read like you wrote it \'97 specific tool calls, price opinions,\
+  "don't bother with X, just use Y." That voice comes from you, not from research.\
+\
+  Want to start with the research, the interview, or both at the same time?\
+\
+\uc0\u10095  You know, I'm not sure that I really need you to do research on the tool landscape. Tools, I think, are   \
+somewhat a lesser concern for this particular output that I'm going for here, particularly for small        \
+business. Let me tell you why. Okay, because most people are going to be using Catchy PT, maybe Claude,     \
+maybe Gemini.                                                                                               \
+                                                                                                            \
+I think that basically all the solutions for small business are going to revolve around those three         \
+platforms. Perhaps Flexity, but in general, it's going to be those four platforms. And I think, really, for \
+ my use case, the focus on Gemini AI Studio, as well as Claude Co-Works, is going to be, you know, 90% of   \
+the solution I'm going to offer.                                                                            \
+                                                                                                            \
+Now, let me give you some context. For small business, think what Nate has to say in the following YouTube  \
+video is very appropriate. And again, probably 90% of the solutions for this cohort will probably fall into \
+ the categories that he's outlining here. Let me give you that transcript.                                  \
+                                                                                                            \
+Title: 5 \'91Boring\'92 AI Workflows that Businesses Actually Want (And How to Sell them)                         \
+                                                                                                            \
+After  building  hundreds  of  AI  workflows for  real  clients  and  teaching  thousands to  do  the       \
+same,  I  noticed  something weird,  which  is  that  most  people  online are  building  the  fancy        \
+stuff,  but businesses  don't  actually  want  that. They  just  want  five  types  of automations.  And    \
+these  are  simple, boring  workflows.  They're  things  that genuinely  save  time,  save  money,  or      \
+remove  mistakes.  And  these  five automations  are  the  ones  that  clients will  pay  the  most  for.   \
+So,  in  this video,  I'll  show  you  what  they  are,  why they  sell,  and  how  you  can  build  and    \
+sell  them,  too.  But  before  we  jump  into the  first  one,  let  me  show  you  how  I figured  all    \
+this  out.  I've  worked  with coaches,  real  estate  agents,  dentists, HVAC,  e-commerce,  and  more.    \
+And  I've seen  the  same  patterns  across  every business.  They're  different  industries, yes,  but     \
+they  have  the  same  problems. And  these  workflows  keep  showing  up again  and  again.  So,  if       \
+you're  watching this  and  you  want  to  make  money  selling AI  in  2026,  don't  overthink  it.  Just  \
+start  with  what  businesses  are  actually paying  for,  what  the  data  is  showing. So,  let's  get    \
+into  the  first  workflow. So,  this  one  is  speed  to  lead.  And honestly,  it  might  be  the  single \
+  easiest automation  to  sell  to  any  service-based business.  So,  here's  what  it                     \
+\'85 +0 lines \'85                                                                                                \
+em  to think  through  their  entire  operation logically,  step  by  step.  And  as  they walk  through    \
+it,  you'll  find  every single  hole.  Maybe  their  intake  process falls  apart.  Maybe  their  team     \
+can't follow  up  fast  enough.  Maybe  their reporting  breaks  down  and  nobody  knows what's            \
+happening.  Whatever  breaks  first, that's  probably  where  you  want  to  start. Think  of  it  like     \
+this.  Imagine  your business  as  a  pipe  and  you  have  water flowing  through  it.  And  that  is      \
+basically  your  cash  flow.  That's  your money.  If  there's  a  clog  near  the beginning  of  the       \
+pipe,  then  why  in  the world  would  you  try  to  pour  more  water into  this  clogged  pipe?  But     \
+that's  what most  businesses  do.  They  spend  more  on ads.  They  spend  more  on  salespeople  and     \
+they  do  all  of  this  stuff  to  try  to  put more  volume  through  a  system  that's already  broken.  \
+ What  you  should  actually be  doing  is  removing  that  clog.  And  then once  it's  gone  and  the     \
+water  can  go through  the  pipe,  then  you  focus  on finding  more  water  and  putting  more water     \
+through  it.  And  the  five  workles that  we  just  covered  are  the  most  common clogs.  Speed  to     \
+lead  fixes  the  response gap.  Document  processing  fixes  the operational  bottleneck.  Follow-up       \
+sequences  fix  the  leaky  pipeline. Database  reactivation  unlocks  revenue that's  already  been  paid  \
+ for.  An internal  [music]  reporting  fixes visibility  gap  that  slows  down  every decision.  So,      \
+pick  your  path,  pick  your first  workflow,  and  go  show  someone  the value.  That's  how  this       \
+starts.  So,  I know  that  we  covered  a  ton  of information  in  this  video.  So,  what  I did  is  I  \
+ threw  all  of  this  into  a resource  guide  that  you  can  access  for completely  free  in  my  free  \
+ school community.  The  link  for  that  will  be down  in  the  description.  And  if  you  want to  see  \
+ exactly  how  I  started  making money  using  this  framework,  then  check out  this  video  on  screen  \
+ right  up  here. But  anyways,  that's  going  to  do it  for today.  If  you  guys  enjoyed  or  you      \
+learned  something  new,  then  please  give a  like.  Definitely  helps  me  out  a  ton. And  as  always, \
+  I  appreciate  you  guys making  it  to  the  end  of  the  video.  I'll see  you  on  the  next  one.    \
+                                                                                                            \
+What is your opinion of all that? Push back on me. Give me ideas. Tell me what you think.                   \
+\
+\uc0\u9210  That's a great video and the framework is solid. Let me push back on a few things and give you my honest\
+  take.\
+\
+  Where He's Right\
+\
+  The five workflows are exactly right for what you're doing. They map cleanly to your SMB cohort:\
+\
+  1. Speed to lead \'97 Every single one of those 13 businesses needs this. The yarn shop, the cleaning\
+  companies, the communications firm. Anyone with a website form or a phone number.\
+  2. Follow-up sequences \'97 This is the #1 thing SMBs are terrible at. They get a lead, respond once, and\
+  forget.\
+  3. Database reactivation \'97 Most of these businesses have been around 2+ years. They're sitting on dead\
+  contacts.\
+  4. Internal reporting \'97 Even a 3-person company wastes hours on status updates and "where are we on that\
+  project?"\
+  5. Document processing \'97 Less universal for this cohort but relevant for the communications firm, the tech\
+   consultant, anyone handling invoices/proposals.\
+\
+  His "pipe" metaphor is dead-on. Find the clog, fix the clog, then pour more water. That's exactly how you\
+  should frame the audit output.\
+\
+  Where I'd Push Back\
+\
+  He's selling to people who BUILD automations, not to business owners. His audience is people who want to\
+  become AI automation consultants. So he's focused on "what can you build and sell." Your use case is\
+  different \'97 you're doing an initial assessment that identifies which of these workflows a specific\
+  business needs. You don't need to teach them how to build it. You need to tell them "here's your clog,\
+  here's what to do about it."\
+\
+  He glosses over the "how" for non-technical owners. He talks about building these automations but doesn't\
+  address the reality for most SMBs: the owner is the bottleneck and they're not technical. When he says\
+  "you can build a speed to lead system," he's talking to someone who knows what an API is. Your clients\
+  don't know what an API is. So the recommendations need to be more like:\
+\
+  - "Sign up for [specific tool]. It costs $X/month. Here's how to connect it to your website. Done."\
+  - OR "This is something you'd hire someone to set up for you. Here's what to ask for and what it should\
+  cost."\
+\
+  He's also missing a category that matters for your cohort: content creation. His five workflows are all\
+  about process automation. But for the businesses in your ScaleUp cohort \'97 the yarn shop, the art studio,\
+  the cleaning company, the food brands \'97 their biggest pain point isn't lead response time. It's that they\
+  have no marketing content. They need help with:\
+\
+  - Social media posts (they stare at a blank screen)\
+  - Email newsletters (they never send one)\
+  - Website copy (it hasn't been updated in 2 years)\
+  - Product descriptions (for e-commerce/wholesale)\
+\
+  For these businesses, the "boring automation" that matters most is: "Use ChatGPT to draft your weekly\
+  content in 20 minutes instead of staring at a blank screen for 3 hours." That's not on his list, but it's\
+  probably the #1 quick win for half your cohort.\
+\
+  He also doesn't address the simplest, most immediate AI use case: just using ChatGPT/Claude as a daily\
+  assistant. Before you build any automations, a business owner can just open ChatGPT and use it to:\
+  - Draft emails to difficult clients\
+  - Write follow-up messages\
+  - Create proposals\
+  - Brainstorm marketing ideas\
+  - Summarize meeting notes\
+  - Write job postings\
+\
+  That's the "walk before you run" step. And it requires zero setup, zero integrations, zero technical\
+  knowledge. Just a $20/month subscription and 15 minutes of training.\
+\
+  How This Maps to Your Prompts\
+\
+  If I were designing the 6 SMB deliverables around this framework plus your additions, here's what I'd do:\
+\
+  \uc0\u9484 \u9472 \u9472 \u9472 \u9472 \u9472 \u9516 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9516 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9516 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9488 \
+  \uc0\u9474   #  \u9474      Deliverable     \u9474        Core Question It Answers       \u9474         Primary Framework         \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  1   \u9474  Where You Stand     \u9474  What tools are you using? What's     \u9474  Practical inventory + "find the  \u9474 \
+  \uc0\u9474      \u9474  Today               \u9474  working? What's broken?              \u9474  clog"                            \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  2   \u9474  Where You're Losing \u9474  What's the bottleneck? Where are     \u9474  The 5-6 workflow categories from \u9474 \
+  \uc0\u9474      \u9474   Money              \u9474  hours being wasted?                  \u9474   Nate's video + content creation \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  3   \u9474  What To Do First    \u9474  The 3-5 highest-impact actions,      \u9474  "Fix the clog first" + specific  \u9474 \
+  \uc0\u9474      \u9474                      \u9474  ranked                               \u9474  tools and steps                  \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  4   \u9474  Your Week-by-Week   \u9474  What to do in what order             \u9474  Simple timeline: week 1, week 2, \u9474 \
+  \uc0\u9474      \u9474  Plan                \u9474                                       \u9474   month 2                         \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474      \u9474  Copy-Paste Prompt   \u9474  What to type into                    \u9474  Ready-made prompts for daily     \u9474 \
+  \uc0\u9474  5   \u9474  Kit                 \u9474  ChatGPT/Claude/Gemini to get stuff   \u9474  tasks                            \u9474 \
+  \uc0\u9474      \u9474                      \u9474  done                                 \u9474                                   \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  6   \u9474  What It Costs &     \u9474  The math                             \u9474  Hours saved \'d7 rate vs. monthly   \u9474 \
+  \uc0\u9474      \u9474  What You Save       \u9474                                       \u9474  costs                            \u9474 \
+  \uc0\u9492 \u9472 \u9472 \u9472 \u9472 \u9472 \u9524 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9524 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9524 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9496 \
+\
+  The Nate video gives you the diagnostic framework (find the clog). Your prompts use that framework to\
+  identify which clogs exist for THIS specific business. The output isn't "here's a 15-document enterprise\
+  audit" \'97 it's "here's your clog, here's the fix, here's what to type, here's what it costs."\
+\
+  The One Thing I'd Add\
+\
+  Nate's "500 new clients" question is brilliant for your use case: "If 500 new customers showed up\
+  tomorrow, what would break first?"\
+\
+  That question should be in your prompt \'97 not as something the app asks the client, but as a lens for\
+  Gemini to use when analyzing the business. When Gemini researches a cleaning company, it should be\
+  thinking: "If 500 people called this cleaning company tomorrow, what would break? The phone wouldn't get\
+  answered. The scheduling would fall apart. The owner couldn't follow up with half of them. The invoices\
+  wouldn't go out." That's how you identify the real pain points \'97 not by listing departments and asking for\
+   a matrix, but by pressure-testing the business with the "500 customers" thought experiment.\
+\
+  That's a fundamentally different prompt structure than what exists now. And it's a better one for your use\
+   case.\
+\
+\uc0\u10043  Cogitated for 1m 12s\
+\
+\uc0\u10095  OK, so now Let's do the interview. And then you can use that context to inform your AI tool research. How \
+ does that sound?                                                                                           \
+\
+\uc0\u9210  Sounds good. Let me start.\
+\
+  I already have good context from the past couple of days \'97 the cohort details, the Burris Chalmers output,\
+   Nate's framework, your tool preferences. Let me fill in the gaps.\
+\
+  First batch \'97 your approach and client relationship:\
+  \uc0\u9151  \'a0Tool use rejected\
+\
+\uc0\u9210  What would you like to clarify?\
+\
+\uc0\u10043  Saut\'e9ed for 1m 3s\
+\
+\uc0\u10095  For this particular cohort, I will be delivering this to them probably by email or PDF and then do a      \
+follow-up call with them after if they request. Now, I also want this tool to be able to produce an output  \
+that I can just hand to a client, walk in for an interview and sit down and go through them with it.        \
+                                                                                                            \
+So it would be, you know, for this particular use case, number two, but I also want to be able to cover     \
+number one as well.                                                                                         \
+\
+\uc0\u9210 \'a0User answered Claude's questions:\
+  \uc0\u9151  \'a0\'b7 After the audit is delivered, do you also help them implement the recommendations? Or is the audit a\
+     standalone deliverable and implementation is separate? \uc0\u8594  Depends on the client\
+     \'b7 What's the tech comfort level of these business owners? Can you hand them a ChatGPT login and say\
+     'use this' or do they need more hand-holding? \uc0\u8594  Mixed bag\
+     \'b7 When a client asks 'what should I use?', what's your honest go-to recommendation today for a\
+     non-technical small business owner who just wants to get started with AI? \uc0\u8594  Depends on the task\
+\
+\uc0\u9210 \'a0User answered Claude's questions:\
+  \uc0\u9151  \'a0\'b7 What monthly budget feels realistic for these clients for AI tools? The cohort revenue range is\
+     $150K-$2.5M, so there's a wide spread. But in your experience, what's the psychological threshold where\
+      they say 'that's too much'? \uc0\u8594  Varies by revenue\
+     \'b7 Which of these do you actually sell (or plan to sell)? Not aspirational \'97 what's on your actual\
+     service menu today. Pick all that apply. \uc0\u8594  AI readiness audit, Implementation / setup, Coaching /\
+     advising\
+     \'b7 You mentioned not recommending Make.com. What about Zapier? And automation platforms in general \'97 do\
+     you avoid them for this audience or are they part of the toolkit? \uc0\u8594  I use n8n for straight automation\
+     tasks. Not a fan of Make or Zapier.\
+\
+\uc0\u9210 \'a0User answered Claude's questions:\
+  \uc0\u9151  \'a0\'b7 If a client tells their friend 'you should hire Jeff, he's great at X' \'97 what's X? What's the thing\
+     you're genuinely best at in this domain? \uc0\u8594  3 and 4\
+     \'b7 Beyond Make.com and Zapier, are there other tools or categories you actively DON'T want recommended\
+     in the output? Pick all that apply. \uc0\u8594  Open Claw, Agent Team setups like Papercli\
+     \'b7 You mentioned voice AI / chatbots earlier as a pain point area. Is that something you actively\
+     recommend to SMB clients? Do you have specific tools you like (or want to recommend) in that space? \uc0\u8594 \
+     Yes, recommend specific tools\
+\
+\uc0\u9210 \'a0User answered Claude's questions:\
+  \uc0\u9151  \'a0\'b7 Which voice AI tools do you want recommended? Pick the ones you'd actually put in front of a client.\
+     \uc0\u8594  Vapi, Retell, Trillet, Elevenlabs depending on use case\
+     \'b7 How long should each deliverable be? You said the current output is overwhelming. What's the right\
+     length for a busy business owner? \uc0\u8594  Depends on the number of deliverables. I'd like to keep the total\
+     around 15-20 pages for everything with a 1-2 page overview.\
+     \'b7 What voice should the output be written in? Imagine you're reading it aloud to the business owner\
+     across a table. \uc0\u8594  Somewhere between 2-3. I'd like it to be professional but without too much\
+     non-essential technical jargon.\
+\
+\uc0\u9210 \'a0User answered Claude's questions:\
+  \uc0\u9151  \'a0\'b7 For this specific ScaleUp cohort with 13 businesses \'97 do you plan to run the tool 13 times (one per\
+     company) or somehow produce one deliverable that covers the whole cohort? \uc0\u8594  Individual audits\
+     \'b7 What's the ideal final output format? You said 15-20 pages total with a 1-2 page overview. Should\
+     that be one document or several? \uc0\u8594  One combined PDF\
+     \'b7 Is there anything else about your approach, your clients, or your preferences that would help me\
+     write better prompts? Things I haven't asked about? \uc0\u8594  I think you've covered it pretty well. The basic\
+     idea is that I want this app to feel like the SMB little brother of the original app. Obviously, we're\
+     taking out some of the reporting because it doesn't make sense for a small business. But in general, I\
+     would like for this to be recognizable as being of a kind with the original, if that makes sense. What\
+     I don't want is something that they could read in somebody's half assed blog post. This should still\
+     register as being a thoughtful, tailored professional audit. Without all the enterprise corporate-speak\
+      jargon and irrelevant metrics.\
+\
+\uc0\u9210  Good interview. I have everything I need. Let me save your profile and then kick off the research.\
+\
+  Wrote 1 memory (ctrl+o to expand)\
+\
+\uc0\u9210  Here's what I got from the interview:\
+\
+  You in a nutshell: Diagnostic consultant who finds the real bottleneck and then actually builds the fix.\
+  You sell the audit, the setup, and ongoing coaching \'97 three tiers.\
+\
+  Your tool stack: ChatGPT / Claude / Gemini as the big three. n8n for automation (not Make or Zapier). Vapi\
+   / Retell / Trillet / Elevenlabs for voice AI. Google AI Studio + Claude Co-Works as the 90% solution\
+  combo.\
+\
+  The output: One combined PDF, 15-20 pages total, 1-2 page overview up front. Professional but plain\
+  English. Not a blog post, not enterprise jargon. The "SMB little brother" of the enterprise app.\
+\
+  The audience: Mixed tech levels, $150K-$2.5M revenue, owner-operated, sensitive to monthly costs but\
+  willing to pay if ROI is obvious.\
+\
+  What you don't want recommended: Make.com, Zapier, Open Claw, Paperclip-style agent team setups, expensive\
+   SaaS, anything requiring API knowledge.\
+\
+  Now let me research the current state of the tools you DO want to recommend, so the prompts are grounded\
+  in 2026 reality.\
+\
+\uc0\u9210  Agent(Research SMB AI tools 2026)\
+  \uc0\u9151  \'a0Done (23 tool uses \'b7 134.5k tokens \'b7 25m 44s)\
+  (ctrl+o to expand)\
+\
+\uc0\u9210  Research is done. Here's the summary of what I found:\
+\
+  ---\
+  Tool Research Highlights (March 2026)\
+\
+  The Big Three \'97 pricing and positioning\
+\
+  \uc0\u9484 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9516 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9516 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9516 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9488 \
+  \uc0\u9474    Tool    \u9474      Price     \u9474                      Best For                     \u9474         Setup        \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  ChatGPT   \u9474  $20/mo        \u9474  Content creation, data analysis, image           \u9474  Easy \'97 chat         \u9474 \
+  \uc0\u9474  Plus      \u9474                \u9474  generation, voice mode                           \u9474  interface           \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  Claude    \u9474  $20/mo        \u9474  Long-form writing, document analysis, proposals  \u9474  Easy \'97 chat         \u9474 \
+  \uc0\u9474  Pro       \u9474                \u9474  \'97 lower hallucination rate                       \u9474  interface           \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  Gemini    \u9474  Free tier or  \u9474  Businesses already on Google Workspace \'97 built   \u9474  Easiest \'97 it's      \u9474 \
+  \uc0\u9474            \u9474  $20/mo        \u9474  into Gmail/Docs/Sheets                           \u9474  already there       \u9474 \
+  \uc0\u9492 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9524 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9524 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9524 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9496 \
+\
+  Key finding: Gemini's free tier is probably the best starting point for a business already on Google\
+  Workspace. They don't need to sign up for anything new \'97 it's in their sidebar. The $20/mo Pro tier adds\
+  Deep Research and higher limits.\
+\
+  Google AI Studio vs. Consumer Gemini\
+\
+  The user mentioned Google AI Studio specifically. The research shows AI Studio uses the same models but\
+  with developer-focused rate limits and stronger reasoning. It's free with 100 requests/day. For a\
+  non-technical business owner, consumer Gemini (in Gmail/Docs) is more appropriate. AI Studio is better for\
+   building workflows and agents. So the recommendation should be tiered: start with consumer Gemini for\
+  daily use, graduate to AI Studio for building automations.\
+\
+  n8n \'97 confirms your preference\
+\
+  The research backs you up. n8n charges per execution (not per step like Zapier/Make), so a 10-step\
+  workflow counts as 1 execution. That's significantly cheaper at scale. Downside: steeper learning curve.\
+  It's not something a non-technical owner sets up themselves \'97 that's where your implementation service\
+  comes in.\
+\
+  Voice AI \'97 reality check\
+\
+  This is the most complex category. None of the platforms you mentioned (Vapi, Retell, Elevenlabs) are\
+  "sign up and go" for a non-technical owner:\
+\
+  \uc0\u9484 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9516 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9516 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9488 \
+  \uc0\u9474   Platform  \u9474              Cost             \u9474                          Reality                         \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  Vapi       \u9474  ~$0.13-0.33/min all-in       \u9474  Developer-first. Requires stitching together 4-6        \u9474 \
+  \uc0\u9474             \u9474                               \u9474  vendors. Not DIY for SMB.                               \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  Retell AI  \u9474  ~$0.11-0.15/min              \u9474  Better pricing transparency. Still developer-focused.   \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  Elevenlabs \u9474  $22-99/mo + per-min          \u9474  Best voice quality. But it's primarily TTS \'97 needs      \u9474 \
+  \uc0\u9474             \u9474                               \u9474  Vapi/Retell for telephony.                              \u9474 \
+  \uc0\u9500 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9532 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9508 \
+  \uc0\u9474  Bland AI   \u9474  $0.12-0.14/min + $299/mo     \u9474  Double billing. Price went up 55% in Dec 2025.          \u9474 \
+  \uc0\u9474             \u9474  subscription                 \u9474                                                          \u9474 \
+  \uc0\u9492 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9524 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9524 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9496 \
+\
+  The honest recommendation for your clients: Voice AI is powerful but requires technical setup. That's an\
+  implementation service you sell, not something they do themselves. The tool research also surfaced\
+  Synthflow AI ($29/mo, no-code builder) as a potential option for less technical setups.\
+\
+  Perplexity \'97 worth mentioning\
+\
+  At $20/mo, Perplexity is complementary to ChatGPT (research vs. creation). But for your clients, it's\
+  probably a "nice to have" rather than essential. The research suggests it's worth it if the business does\
+  5+ research projects monthly.\
+\
+  Common AI Adoption Mistakes (for the prompts)\
+\
+  The research surfaced 7 mistakes worth building into the diagnostic:\
+\
+  1. Automating broken processes \'97 fix the process first, then automate\
+  2. No clear objective \'97 "use AI" isn't a strategy\
+  3. Skipping training \'97 licenses without training = wasted money\
+  4. Too broad too fast \'97 start with one thing, nail it, expand\
+  5. No human review \'97 never ship AI output unreviewed\
+  6. Ignoring security \'97 don't put customer data in free tools\
+  7. No measurement \'97 if you don't track hours saved, you can't prove ROI\
+\
+  ---\
+  What This Means for the Prompts\
+\
+  The research gives the prompts grounded, current, specific tool recommendations with real pricing.\
+  Combined with your interview answers, I now have everything needed to write the 6 SMB prompts. Ready whenyou are.\
+\
+}
