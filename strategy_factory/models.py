@@ -121,6 +121,7 @@ class CompetitorProfile(BaseModel):
 class TechLandscape(BaseModel):
     """Technology and AI landscape analysis."""
     company_tech_stack: List[str] = Field(default_factory=list)
+    verified_tech_summary: str = Field(default="", description="Tech verified via DNS/HTTP, not inferred")
     company_ai_initiatives: List[str] = Field(default_factory=list)
     industry_ai_adoption_rate: str = ""
     industry_ai_use_cases: List[Dict[str, Any]] = Field(default_factory=list)
