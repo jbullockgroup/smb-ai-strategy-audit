@@ -55,6 +55,12 @@ Desktop.ini
 # Output directories (generated content)
 output/
 
+# Knowledge Base
+knowledge_base/
+
+# Planning Docs
+planning/
+
 # Progress tracking
 progress/
 

@@ -65,6 +65,66 @@ SERVER_PATTERNS = {
     "ghs.googlehosted.com": "Google Sites",
 }
 
+# CNAME patterns → CRM/scheduling platform (strongest signal)
+CRM_SCHED_CNAME_PATTERNS = {
+    # CRM + Scheduling dual
+    "dubsado": "Dubsado (CRM + Scheduling)",
+    "honeybook": "HoneyBook (CRM + Scheduling)",
+    "gohighlevel": "GoHighLevel (CRM + Scheduling)",
+    "ghl": "GoHighLevel (CRM + Scheduling)",
+    # Pure scheduling
+    "calendly": "Calendly (Scheduling)",
+    "acuityscheduling": "Acuity Scheduling",
+    "setmore": "Setmore (Scheduling)",
+    "mindbody": "Mindbody (Scheduling)",
+    "vagaro": "Vagaro (Scheduling)",
+    "booksy": "Booksy (Scheduling)",
+    "fresha": "Fresha (Scheduling)",
+    "styleseat": "StyleSeat (Scheduling)",
+    "square": "Square Appointments (Scheduling)",
+}
+
+# Subdomains checked for CRM/scheduling CNAMEs
+CRM_SCHED_SUBDOMAINS = ["portal", "booking", "schedule", "cal"]
+
+# MX record patterns → CRM (reuses MX records already fetched for email detection)
+# Microsoft Dynamics 365 excluded — overlaps with Microsoft 365 email MX.
+CRM_MX_PATTERNS = [
+    (["dubsado"], "Dubsado (CRM + Scheduling)"),
+    (["hubspot", "hubspotemail"], "HubSpot CRM"),
+    (["infusionsoft", "keap"], "Keap (formerly Infusionsoft)"),
+    (["activecampaign"], "ActiveCampaign"),
+    (["salesforce"], "Salesforce"),
+    (["ghlconnect", "gohighlevel"], "GoHighLevel (CRM + Scheduling)"),
+]
+
+# HTML substring patterns → CRM/scheduling (fallback signal)
+CRM_SCHED_HTML_PATTERNS = {
+    # CRM
+    "dubsado": "Dubsado (CRM + Scheduling)",
+    "honeybook": "HoneyBook (CRM + Scheduling)",
+    "hubspot": "HubSpot CRM",
+    "hs-scripts": "HubSpot CRM",
+    "salesforce": "Salesforce",
+    "lightning.force.com": "Salesforce",
+    "keap": "Keap",
+    "infusionsoft": "Keap",
+    "activecampaign": "ActiveCampaign",
+    "pipedrive": "Pipedrive",
+    "zoho": "Zoho CRM",
+    "gohighlevel": "GoHighLevel (CRM + Scheduling)",
+    # Scheduling
+    "calendly": "Calendly (Scheduling)",
+    "acuityscheduling": "Acuity Scheduling",
+    "setmore": "Setmore (Scheduling)",
+    "mindbody": "Mindbody (Scheduling)",
+    "vagaro": "Vagaro (Scheduling)",
+    "booksy": "Booksy (Scheduling)",
+    "fresha": "Fresha (Scheduling)",
+    "styleseat": "StyleSeat (Scheduling)",
+    "square appointments": "Square Appointments (Scheduling)",
+}
+
 
 @dataclass
 class TechDetectionResult:
@@ -73,6 +133,7 @@ class TechDetectionResult:
     email_provider: Optional[str] = None
     mx_records: List[str] = field(default_factory=list)
     cms: Optional[str] = None
+    crm: Optional[str] = None
     hosting: Optional[str] = None
     cdn: Optional[str] = None
     analytics: List[str] = field(default_factory=list)
@@ -86,6 +147,8 @@ class TechDetectionResult:
             techs.append(self.email_provider)
         if self.cms:
             techs.append(self.cms)
+        if self.crm:
+            techs.append(self.crm)
         if self.hosting:
             techs.append(self.hosting)
         if self.cdn:
@@ -101,6 +164,8 @@ class TechDetectionResult:
             lines.append(f"- Email: {self.email_provider} (verified via MX records)")
         if self.cms:
             lines.append(f"- Website CMS: {self.cms} (verified via HTTP inspection)")
+        if self.crm:
+            lines.append(f"- CRM/Scheduling: {self.crm}")
         if self.hosting:
             lines.append(f"- Hosting/CDN: {self.hosting}")
         if self.analytics:
@@ -127,6 +192,7 @@ def detect_tech(domain_or_url: str) -> TechDetectionResult:
 
     # Run MX lookup and HTTP inspection independently
     _detect_email_provider(domain, result)
+    _detect_crm_cname(domain, result)
     _detect_web_tech(domain, result)
 
     return result
@@ -141,7 +207,7 @@ def _extract_domain(domain_or_url: str) -> str:
 
 
 def _detect_email_provider(domain: str, result: TechDetectionResult) -> None:
-    """Look up MX records to identify the email provider."""
+    """Look up MX records to identify the email provider and CRM."""
     try:
         output = subprocess.run(
             ["dig", "+short", "MX", domain],
@@ -156,12 +222,6 @@ def _detect_email_provider(domain: str, result: TechDetectionResult) -> None:
         ]
         result.mx_records = mx_lines
 
-        for mx_line in mx_lines:
-            for patterns, provider in MX_PROVIDERS:
-                if any(p in mx_line for p in patterns):
-                    result.email_provider = provider
-                    return
-
     except FileNotFoundError:
         # dig not available, try nslookup
         try:
@@ -171,19 +231,58 @@ def _detect_email_provider(domain: str, result: TechDetectionResult) -> None:
                 text=True,
                 timeout=10,
             )
-            mx_text = output.stdout.lower()
-            result.mx_records = [mx_text]
-
-            for patterns, provider in MX_PROVIDERS:
-                if any(p in mx_text for p in patterns):
-                    result.email_provider = provider
-                    return
-
+            result.mx_records = [output.stdout.lower()]
         except Exception as e:
             result.errors.append(f"MX lookup failed: {e}")
-
+            return
     except Exception as e:
         result.errors.append(f"MX lookup failed: {e}")
+        return
+
+    # Match email provider
+    for mx_line in result.mx_records:
+        for patterns, provider in MX_PROVIDERS:
+            if any(p in mx_line for p in patterns):
+                result.email_provider = provider
+                break
+        if result.email_provider:
+            break
+
+    # Match CRM MX patterns (reuses same MX records)
+    for mx_line in result.mx_records:
+        for patterns, crm_name in CRM_MX_PATTERNS:
+            if any(p in mx_line for p in patterns):
+                result.crm = crm_name
+                return
+
+
+def _detect_crm_cname(domain: str, result: TechDetectionResult) -> None:
+    """Check common subdomains for CNAMEs pointing to CRM/scheduling platforms.
+
+    CNAME is the strongest signal and overrides any MX-based detection.
+    """
+    for subdomain in CRM_SCHED_SUBDOMAINS:
+        fqdn = f"{subdomain}.{domain}"
+        try:
+            output = subprocess.run(
+                ["dig", "+short", "CNAME", fqdn],
+                capture_output=True,
+                text=True,
+                timeout=5,
+            )
+        except FileNotFoundError:
+            return  # no dig available, skip CNAME detection
+        except Exception as e:
+            result.errors.append(f"CNAME lookup failed for {fqdn}: {e}")
+            continue
+
+        cname = output.stdout.strip().lower()
+        if not cname:
+            continue
+        for pattern, label in CRM_SCHED_CNAME_PATTERNS.items():
+            if pattern in cname:
+                result.crm = label
+                return
 
 
 def _detect_web_tech(domain: str, result: TechDetectionResult) -> None:
@@ -259,6 +358,13 @@ def _detect_web_tech(domain: str, result: TechDetectionResult) -> None:
     if "clarity.ms" in html_lower:
         result.analytics.append("Microsoft Clarity")
 
+    # Detect CRM/scheduling from HTML (only if not already set by CNAME or MX)
+    if result.crm is None:
+        for pattern, crm_name in CRM_SCHED_HTML_PATTERNS.items():
+            if pattern in html_lower:
+                result.crm = crm_name
+                break
+
     # Detect other notable tech
     if "recaptcha" in html_lower:
         result.other_tech.append("reCAPTCHA")
@@ -266,8 +372,6 @@ def _detect_web_tech(domain: str, result: TechDetectionResult) -> None:
         result.other_tech.append("Stripe")
     if "intercom" in html_lower:
         result.other_tech.append("Intercom")
-    if "hubspot" in html_lower:
-        result.other_tech.append("HubSpot")
     if "mailchimp" in html_lower:
         result.other_tech.append("Mailchimp")
     if "crisp" in html_lower and "crisp.chat" in html_lower:

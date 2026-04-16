@@ -962,6 +962,27 @@ HOME_CONTENT = """
 
 HOME_SCRIPTS = """
 <script>
+    // Persist form fields across navigation (session-scoped)
+    (function persistForm() {
+        const ids = ['company', 'website', 'industry', 'context', 'audience'];
+        const KEY = 'formDraft';
+        let saved = {};
+        try { saved = JSON.parse(sessionStorage.getItem(KEY) || '{}'); } catch (e) {}
+        ids.forEach(id => {
+            const el = document.getElementById(id);
+            if (!el) return;
+            if (saved[id]) el.value = saved[id];
+            el.addEventListener('input', () => {
+                const draft = {};
+                ids.forEach(i => {
+                    const node = document.getElementById(i);
+                    if (node) draft[i] = node.value;
+                });
+                sessionStorage.setItem(KEY, JSON.stringify(draft));
+            });
+        });
+    })();
+
     // Sidebar search filtering
     const searchInput = document.getElementById('sidebar-search');
     const sidebarList = document.getElementById('sidebar-list');
@@ -1675,6 +1696,17 @@ AUDIENCE_BUILDER_SCRIPTS = """
         appendMessage('user', msg);
         chatHistory.push({role: 'user', content: msg});
 
+        const chatMessages = document.getElementById('chat-messages');
+        const loadingEl = document.createElement('div');
+        loadingEl.style.display = 'flex';
+        loadingEl.style.alignItems = 'center';
+        loadingEl.style.gap = '0.5rem';
+        loadingEl.style.padding = '0.5rem 0.75rem';
+        loadingEl.style.color = 'var(--text-secondary)';
+        loadingEl.innerHTML = '<div class="spinner"></div><span>Generating response...</span>';
+        chatMessages.appendChild(loadingEl);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+
         try {
             const resp = await fetch('/audience-builder/chat', {
                 method: 'POST',
@@ -1682,6 +1714,8 @@ AUDIENCE_BUILDER_SCRIPTS = """
                 body: JSON.stringify({history: chatHistory})
             });
             const data = await resp.json();
+
+            loadingEl.remove();
 
             if (data.error) {
                 document.getElementById('save-error').style.display = 'block';
@@ -1703,6 +1737,7 @@ AUDIENCE_BUILDER_SCRIPTS = """
                 }
             }
         } catch(e) {
+            loadingEl.remove();
             document.getElementById('save-error').style.display = 'block';
             document.getElementById('error-text').textContent = 'Network error: ' + e.message;
         }
